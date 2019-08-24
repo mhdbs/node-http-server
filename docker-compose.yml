@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  basic-http:
+    container_name: basic-http
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
+    volumes:
+     - .:/code
+     - /code/node_modules
